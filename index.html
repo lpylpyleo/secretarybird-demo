@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE PROSECUTION — 蛇鹫案卷 · A Secretarybird Dossier</title>
+<meta name="description" content="一宗针对蛇类的漫长公诉：蛇鹫 Sagittarius serpentarius 的检察卷宗。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ CASE COVER / HERO ============ -->
+<header class="cover" id="cover">
+  <div class="cover__frame">
+    <p class="court-line">IN THE HIGH COURT OF THE OPEN GRASSLAND · 稀树草原高等法庭 立案在卷</p>
+
+    <div class="cover__grid">
+      <div class="cover__head">
+        <h1 class="masthead">
+          <span class="masthead__line"><span>THE</span></span>
+          <span class="masthead__line"><span>PROSECUTION</span></span>
+        </h1>
+        <p class="cover__sub">蛇鹫 诉 蛇类 —— 一宗持续了三千万年的公诉</p>
+        <dl class="case-meta">
+          <div><dt>CASE</dt><dd>No. SRP‑1776</dd></div>
+          <div><dt>PROSECUTOR</dt><dd><i>Sagittarius&nbsp;serpentarius</i> 蛇鹫</dd></div>
+          <div><dt>ACCUSED'S&nbsp;CLASS</dt><dd>Serpentes 蛇亚目</dd></div>
+        </dl>
+        <p class="scroll-cue">READ THE FILE <span class="scroll-cue__arrow">↓</span> 开始阅卷</p>
+      </div>
+
+      <figure class="exhibit exhibit--hero">
+        <span class="exhibit__tag">EXHIBIT A · 物证 A</span>
+        <img src="assets/hero-amboseli.jpg" alt="蛇鹫立于安博塞利草原，黑色羽冠呈扇形张开，双腿细长。" width="2000" height="2000">
+        <figcaption class="exhibit__cap">The prosecutor, on patrol. Amboseli, Kenya, 2024.<br>公诉人日常巡视 · 摄于肯尼亚安博塞利</figcaption>
+      </figure>
+    </div>
+
+    <div class="stamp stamp--cover" aria-hidden="true"><span>ADMITTED<br>AS EVIDENCE</span></div>
+  </div>
+
+  <div class="charges" aria-hidden="true">
+    <div class="charges__track" id="chargesTrack"></div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ FORM X-1 档案 ============ -->
+  <section class="form-section" id="file">
+    <header class="form-head">
+      <span class="form-head__rule" aria-hidden="true"></span>
+      <p class="form-head__title">FORM X‑1 —— RECORD OF THE PROSECUTOR 公诉人档案</p>
+      <span class="form-head__rule" aria-hidden="true"></span>
+    </header>
+
+    <div class="file-grid">
+      <figure class="exhibit exhibit--plate">
+        <span class="exhibit__tag">HISTORICAL RECORD · 历史卷 · TAB. XXVIII</span>
+        <img src="assets/plate-1776.jpg" alt="18 世纪雕版图谱 Falco serpentarius：蛇鹫侧面立像，红黑长腿，下方有头部素描。" width="1079" height="1600" loading="lazy">
+        <figcaption class="exhibit__cap">Engraved by J. F. Miller, <i>Icones Animalium</i>.<br>此案卷宗最早可追溯的画像记录</figcaption>
+      </figure>
+
+      <div class="file-data">
+        <h2 class="sect-title" data-typewrite>一名黑袜长腿、<br>戴假睫毛的<br>法庭书记员。</h2>
+        <p class="body-zh">它的名字是一场旷日持久的误会：脑后那簇黑色羽冠，酷似旧时法庭书记员夹在耳后的羽毛笔——于是人们管它叫 “Secretary”，秘书鸟。而它的拉丁属名 <i>Sagittarius</i> 毫不含糊：<b>射手</b>。一个用腿办案的射手。</p>
+        <table class="ledger">
+          <tbody>
+            <tr><th scope="row">身高 HEIGHT</th><td>约 1.3 m</td><td class="ledger__note">站着等高一名小学生</td></tr>
+            <tr><th scope="row">翼展 WINGSPAN</th><td>逾 2 m</td><td class="ledger__note">起飞时白底黑尖</td></tr>
+            <tr><th scope="row">体重 WEIGHT</th><td>约 4 kg</td><td class="ledger__note">轻得不像谋杀者</td></tr>
+            <tr><th scope="row">证件照 ID</th><td class="ledger__accent">面部橙红裸皮</td><td class="ledger__note">情绪激烈时愈发鲜红</td></tr>
+          </tbody>
+        </table>
+        <figure class="mugshot">
+          <img src="assets/head-closeup.jpg" alt="蛇鹫面部特写：眼周大片橙红色裸皮，灰色钩状喙，眼神锐利。" width="2000" height="1447" loading="lazy">
+          <figcaption class="exhibit__cap">Mugshot · 面部在案照。长睫毛属实，未化妆。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORM X-2 证据 ============ -->
+  <section class="form-section form-section--evidence" id="evidence">
+    <header class="form-head">
+      <span class="form-head__rule" aria-hidden="true"></span>
+      <p class="form-head__title">FORM X‑2 —— EVIDENCE LEDGER 证据清单</p>
+      <span class="form-head__rule" aria-hidden="true"></span>
+    </header>
+
+    <h2 class="sect-title" data-typewrite>检方呈交五份证供。<br>每一份都可复核。</h2>
+
+    <div class="bigstat">
+      <p class="bigstat__num"><span data-counter="15">15</span><span class="bigstat__unit">ms</span></p>
+      <p class="bigstat__label">一次踢击从抬腿到命中的接触时间 —— 约为眨眼耗时的十分之一</p>
+    </div>
+
+    <table class="ledger ledger--evidence">
+      <tbody>
+        <tr><th scope="row">E‑01</th><td>踢击峰值力约 <b>195 牛顿</b>，相当于自身<b>体重五倍</b></td><td class="ledger__note">Portugal 等，2016 年生物力学实测</td></tr>
+        <tr><th scope="row">E‑02</th><td>每日徒步巡猎 <b>20–30 公里</b></td><td class="ledger__note">猛禽中唯一以步行办案者</td></tr>
+        <tr><th scope="row">E‑03</th><td>猎物清单含<b>眼镜蛇、鼓腹咝蝰</b>等剧毒蛇类</td><td class="ledger__note">兼收野兔、獴、蜥蜴与甲虫</td></tr>
+        <tr><th scope="row">E‑04</th><td>小腿覆有<b>铠甲状鳞片</b>，可挡蛇类反击</td><td class="ledger__note">自带防刺装备</td></tr>
+        <tr><th scope="row">E‑05</th><td>击杀后整吞或撕食，<b>现场不留凶器</b></td><td class="ledger__note">因为凶器就是脚</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ 作案现场(深色反转) ============ -->
+  <section class="scene" id="scene">
+    <header class="form-head form-head--dark">
+      <span class="form-head__rule" aria-hidden="true"></span>
+      <p class="form-head__title">FORM X‑3 —— THE CRIME SCENE 作案现场还原</p>
+      <span class="form-head__rule" aria-hidden="true"></span>
+    </header>
+
+    <div class="scene__grid">
+      <figure class="scene__photo">
+        <img src="assets/kick-taxidermy.jpg" alt="蛇鹫双翼完全张开，白羽黑尖，长腿下探，正扑向草原上的猎物。" width="2000" height="1600" loading="lazy">
+        <svg class="scene__strings" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <line class="scene__string" x1="8" y1="6" x2="45" y2="52" />
+          <line class="scene__string" x1="92" y1="10" x2="62" y2="60" />
+        </svg>
+        <span class="pin pin--1" style="--x:7%;--y:4%">①</span>
+        <span class="pin pin--2" style="--x:91%;--y:8%">②</span>
+      </figure>
+      <div class="scene__notes">
+        <p class="scene__note"><b>①</b> 双翼展开并非为飞——只为保持平衡，像拳手出拳前的架式。</p>
+        <p class="scene__note"><b>②</b> 真正的武器在画面之外：那条下探的长腿。它不用喙啄，抬腿，瞄准头部或脊柱，<em>stomp</em>。</p>
+        <p class="scene__note">一条鼓腹咝蝰从被锁定到毙命，平均不足一秒。幼年的蹬羚、獴，亦在作案范围内。这是非洲草原上唯一在地面办案的猛禽。</p>
+      </div>
+    </div>
+
+    <p class="stomp" id="stomp" aria-hidden="true">STOMP<span class="stomp__dot">.</span></p>
+  </section>
+
+  <!-- ============ FORM X-4 辖区 ============ -->
+  <section class="form-section" id="jurisdiction">
+    <header class="form-head">
+      <span class="form-head__rule" aria-hidden="true"></span>
+      <p class="form-head__title">FORM X‑4 —— JURISDICTION 管辖区域</p>
+      <span class="form-head__rule" aria-hidden="true"></span>
+    </header>
+
+    <div class="file-grid file-grid--rev">
+      <div class="file-data">
+        <h2 class="sect-title" data-typewrite>整个撒哈拉以南，<br>都是它的法庭。</h2>
+        <p class="body-zh">从塞内加尔的开阔草原，到埃塞俄比亚高原，再一路南下至好望角——只要有空旷的草原与金合欢，就有它的辖区。终身一夫一妻，在平顶金合欢树顶筑起一米见方的巢，并用翅膀在空中翻滚，宣示主权。</p>
+        <table class="ledger">
+          <tbody>
+            <tr><th scope="row">辖区 RANGE</th><td>撒哈拉以南非洲</td><td class="ledger__note">约 2,000 万 km²</td></tr>
+            <tr><th scope="row">据点 NEST</th><td>金合欢树顶</td><td class="ledger__note">夫妻每年修缮同一处</td></tr>
+            <tr><th scope="row">编制 PAIR</th><td>终身一夫一妻</td><td class="ledger__note">联合办案，共同哺幼</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="exhibit exhibit--pair">
+        <span class="exhibit__tag">EXHIBIT B · 物证 B</span>
+        <img src="assets/pair-amboseli.jpg" alt="两只蛇鹫立于金合欢灌木丛顶，一只回望，露出橙红色面斑。" width="2000" height="1333" loading="lazy">
+        <figcaption class="exhibit__cap">The prosecutors, at their chambers.<br>公诉人夫妇在事务所楼顶巡视 · 肯尼亚安博塞利</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 判决 ============ -->
+  <section class="verdict" id="verdict">
+    <p class="verdict__kicker">然而本席必须宣读另一份卷宗——</p>
+    <h2 class="verdict__title" data-typewrite>公诉人<br>需要辩护人。</h2>
+    <div class="stamp stamp--verdict" aria-hidden="true"><span>ENDANGERED</span></div>
+    <p class="verdict__body">2020 年，IUCN 红色名录将蛇鹫由「易危」上调为<b>濒危</b>。草原开垦、电线碰撞、非法捕捉，正在让这位全非洲唯一的地面猛禽，失去它审理了三千万年的法庭。案件尚未审结；这一次，它站在了需要被辩护的一侧。</p>
+    <p class="verdict__cite">本案援引：IUCN Red List 2020 · Portugal et al., <i>Current Biology</i> 26(2), 2016</p>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <p>THE PROSECUTION — 蛇鹫案卷 · 一个演示性质的编辑实验页</p>
+  <p class="colophon__credits">
+    摄影：D. Delso (CC BY‑SA 4.0) · D. J. Martins / Flickr (CC BY 2.0) · Lip Kee / Flickr (CC BY‑SA 2.0)<br>
+    雕版图版：John Frederick Miller, <i>Icones Animalium</i>（公有领域）— 均取自 Wikimedia Commons
+  </p>
+  <p class="colophon__sig">— 卷宗完 —</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

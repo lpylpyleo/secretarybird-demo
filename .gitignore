@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+._*
+
+# impeccable working artifacts (local review captures / tooling state)
+.impeccable/

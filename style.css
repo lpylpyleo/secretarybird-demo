@@ -104,6 +104,9 @@ body::before {
   to   { transform: translate3d(2%, 1.5%, 0) scale(1.04); }
 }
 
+/* last guard: no cover child may set the frame's intrinsic min width */
+.cover__head { min-width: 0; }
+
 .cover__frame {
   flex: 1;
   display: flex;
@@ -170,7 +173,14 @@ body::before {
   letter-spacing: 0.3em;
   color: var(--ink-soft);
 }
-.scroll-cue__arrow { display: inline-block; animation: cueDrop 1.6s ease-in-out infinite; }
+/* ↓ 的字形墨迹悬在基线下方(中心比大写字母低 1.844px)，
+   上移 0.148em 对齐大写字母的墨迹中心(相对定位不撑高行盒) */
+.scroll-cue__arrow {
+  display: inline-block;
+  position: relative;
+  top: -0.148em;
+  animation: cueDrop 1.6s ease-in-out infinite;
+}
 @keyframes cueDrop { 50% { transform: translateY(0.35em); } }
 
 /* ---------- evidence mounts ---------- */
@@ -533,20 +543,21 @@ body::before {
    ========================================================== */
 
 @media (max-width: 1024px) {
-  .cover__grid { grid-template-columns: 1fr; gap: 3rem; align-items: start; }
-  .exhibit--hero { max-width: 32em; margin: 0 auto; }
+  .cover__grid { grid-template-columns: minmax(0, 1fr); gap: 3rem; align-items: start; }
+  /* rotated mount: leave horizontal slack so the tilt cannot cross the plate edge */
+  .exhibit--hero { max-width: min(32em, calc(100% - 2rem)); margin: 0 auto; }
   .stamp--cover { bottom: auto; top: 10%; right: 6%; }
-  .file-grid, .file-grid--rev { grid-template-columns: 1fr; }
+  .file-grid, .file-grid--rev { grid-template-columns: minmax(0, 1fr); }
   .file-grid--rev .file-data { order: 2; }
   .file-grid--rev .exhibit { order: 1; }
   .file-grid .exhibit--plate { max-width: 26em; }
-  .scene__grid { grid-template-columns: 1fr; }
+  .scene__grid { grid-template-columns: minmax(0, 1fr); }
   .bigstat { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }
 
 @media (max-width: 700px) {
   .masthead { font-size: clamp(2.2rem, 10.2vw, 3.4rem); }
-  .case-meta { grid-template-columns: 1fr 1fr; }
+  .case-meta { grid-template-columns: minmax(0, 1fr); gap: 1.2em; }
   .form-head__title { white-space: normal; letter-spacing: 0.18em; }
   .stomp { font-size: 24vw; }
   .stamp--cover {

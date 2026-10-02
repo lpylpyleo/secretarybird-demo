@@ -15,10 +15,12 @@
     "COUNT 03 — LETHAL KICK, FIRST DEGREE · 一级致命踢击 · " +
     "COUNT 04 — 30KM DAILY PATROL · 每日巡猎三十公里 · ";
   const track = document.getElementById("chargesTrack");
+  let unit = null;
   for (let i = 0; i < 4; i++) {
     const span = document.createElement("span");
     span.textContent = chargesText;
     track.appendChild(span);
+    if (i === 0) unit = span;
   }
 
   if (reduced || !window.gsap) return;
@@ -34,13 +36,27 @@
     gsap.ticker.lagSmoothing(0);
   }
 
-  /* ---------- ticker 匀速平移 ---------- */
-  gsap.to(track, {
-    xPercent: -25, // 4 份内容移动 1 份 = 无缝
-    ease: "none",
-    duration: 30,
-    repeat: -1,
-  });
+  /* ---------- ticker 匀速平移 ----------
+     一份内容 + 一个 gap = 循环步距；位移必须 ≥ 步距，
+     否则末份右侧留白、段落之间出现向后跳帧。 */
+  let ticker = null;
+  const startTicker = () => {
+    const step = unit.getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap);
+    if (!(step > 0)) return null; // fonts not ready yet; keep the previous tween
+    ticker && ticker.kill();
+    return gsap.fromTo(track, { x: 0 }, {
+      x: -step,           // 位移一整份 = 无缝回环
+      ease: "none",
+      duration: 30,       // 一份内容 30s 走完
+      repeat: -1,
+    });
+  };
+  ticker = startTicker();
+
+  // 字体到位后步距才稳定，按真实宽度重算一次时长
+  const remeasure = () => { ticker = startTicker() || ticker; };
+  if (unit && document.fonts) document.fonts.ready.then(remeasure);
+  window.addEventListener("resize", remeasure);
 
   /* ---------- 封面入场：报头逐行升起 + 物证照片揭幕 ---------- */
   const heroTl = gsap.timeline({ defaults: { ease: "power4.out" } });
